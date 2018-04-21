@@ -1,0 +1,9 @@
+[package]
+name = "cwa"
+version = "0.1.0"
+authors = ["losfair <zhy20000919@hotmail.com>"]
+description = "Common WebAssembly API library"
+license = "MIT"
+repository = "https://github.com/CommonWA/cwa-rs"
+
+[dependencies]
