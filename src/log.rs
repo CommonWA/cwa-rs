@@ -7,6 +7,7 @@ pub enum Level {
     Info = 6
 }
 
+/// Writes a line of log with the specified level to host logger.
 pub fn write(level: Level, text: &str) {
     let text = text.as_bytes();
 

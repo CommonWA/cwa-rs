@@ -1,17 +1,20 @@
 use raw;
 
+/// Returns the major part of the spec version implemented by host runtime.
 pub fn spec_major() -> i32 {
     unsafe {
         raw::runtime_spec_major()
     }
 }
 
+/// Returns the minor part of the spec version implemented by host runtime.
 pub fn spec_minor() -> i32 {
     unsafe {
         raw::runtime_spec_minor()
     }
 }
 
+/// Returns the name of host runtime.
 pub fn name() -> &'static str {
     static mut NAME: Option<&'static str> = None;
 

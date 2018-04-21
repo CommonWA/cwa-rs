@@ -1,5 +1,8 @@
 use raw;
 
+/// Returns the environment variable associated with `key`.
+/// If there is no environment variable with the specified key or the value is not valid
+/// UTF-8, `None` is returned.
 pub fn get(key: &str) -> Option<String> {
     let key = key.as_bytes();
     let mut current_len: usize = 32;
