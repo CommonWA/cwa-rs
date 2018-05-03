@@ -7,6 +7,24 @@ pub struct Resource {
 }
 
 impl Resource {
+    pub fn open(url: &str) -> Option<Resource> {
+        let url = url.as_bytes();
+        if url.len() == 0 {
+            return None;
+        }
+
+        let handle = unsafe {
+            raw::resource_open(&url[0], url.len())
+        };
+        if handle < 0 {
+            None
+        } else {
+            Some(Resource {
+                handle: handle
+            })
+        }
+    }
+
     pub unsafe fn from_raw(handle: i32) -> Resource {
         // TODO: Deal with invalid handles (< 0)
         Resource {
