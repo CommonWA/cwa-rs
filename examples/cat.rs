@@ -35,6 +35,7 @@ fn parse_opt(_opts: &mut CmdOpts, key: &str) {
         },
         _ => {
             eprintln!("Unknown option: {}", key);
+            eprintln!("{}", HELP_TEXT);
             panic!();
         }
     }
