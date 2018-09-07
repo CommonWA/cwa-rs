@@ -1,4 +1,3 @@
-#[wasm_import_module = "cwa"]
 extern "C" {
     pub fn log_write(level: i32, text_ptr: *const u8, text_len: usize);
     pub fn env_get(
