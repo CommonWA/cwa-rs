@@ -1,6 +1,6 @@
 [package]
 name = "cwa"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["losfair <zhy20000919@hotmail.com>"]
 description = "Common WebAssembly API library"
 license = "MIT"
